@@ -1,0 +1,8 @@
+let person = {
+    name: "Abin",
+    age: 22,
+    print: function(){
+        console.log(`my name is ${this.name}`)
+    }
+}
+

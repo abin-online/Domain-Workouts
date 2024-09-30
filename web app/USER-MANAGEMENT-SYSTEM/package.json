@@ -1,0 +1,19 @@
+{
+  "name": "app.js",
+  "version": "1.0.0",
+  "description": "CRUD application with user login",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Abin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "express-session": "^1.18.0",
+    "mongoose": "^8.2.1",
+    "nodemon": "^3.1.0"
+  }
+}
