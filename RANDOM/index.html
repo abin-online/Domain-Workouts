@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Login Page</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+
+    <div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 400px; width: 100%;">
+        <h2 style="text-align: center; margin-bottom: 30px;">Login</h2>
+        
+        <form onsubmit="return validateForm()">
+            <div style="margin-bottom: 15px;">
+                <label for="username" style="display: block; font-weight: bold; margin-bottom: 5px;">Username</label>
+                <input type="text" id="username" name="username" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="password" style="display: block; font-weight: bold; margin-bottom: 5px;">Password</label>
+                <input type="password" id="password" name="password" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div style="text-align: center;">
+                <button type="submit" style="padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">Login</button>
+            </div>
+        </form>
+
+        <p id="message" style="text-align: center; margin-top: 20px; color: red;"></p>
+    </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var message = document.getElementById("message");
+
+            if (username === "" || password === "") {
+                message.textContent = "Both fields are required!";
+                return false;
+            } else if (password.length < 6) {
+                message.textContent = "Password must be at least 6 characters!";
+                return false;
+            } else {
+                message.textContent = "Login successful!";
+                message.style.color = "green";
+                return false; // Prevent form submission for demo
+            }
+        }
+    </script>
+
+</body>
+</html>
