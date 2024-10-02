@@ -1,6 +1,6 @@
 function* countNumber() {
-    for(let i = 0 ; i <= 10 ; i++){
-        yield i
+    for(let i = 4 ; i <= 10 ; i+=4){ 
+        yield i 
     }
 }
 
